@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		title= title
+		meta(charset="utf8")
+		link(rel="stylesheet" href="css/bootstrap-reboot.min.css")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+	body
+		include mixins/product-card.pug
+		include mixins/features-card.pug
+		include partials/navbar.pug
+
+		block content
+
+		script(type="text/javascript" src="axios.min.js")
+		script(type="text/javascript" src="jquery.min.js")
+		script(type="text/javascript" src="js/bootstrap.min.js")

@@ -1,0 +1,32 @@
+extends base.pug
+block content
+	section.p-5.mb-4.bg-light.rounded-3
+		.container-fluid.py-5
+			h1.display-5.fw-bold Лучший магазин футбольной формы
+			p.col-md-8.fs-4.pl-0 Почему мы? А ты видишь на этом сайте много других вариантов? Так что заткнись и отдай свои деньги
+			button.btn.btn-primary.btn-lg(type="button") Посмотреть все товары
+	section
+		.container
+			.row
+				each product in products
+					+product-card(product)
+	section
+		.container.py-5
+			h2.pb-2.border-bottom Наши преимущества
+			.row.g-5.py-5
+				each feature in features
+					+feature-card(feature)
+	section
+		.container
+			h2 Заказать обратный звонок
+			.mb-3
+				label.form-label(for="formGroupExampleInput") Имя и фамилия
+				input.form-control#formGroupExampleInput(type="text" placeholder="Петя Петров")
+			.mb-3
+				label.form-label(for="formGroupExampleInput") Почта
+				input.form-control#formGroupExampleInput(type="text" placeholder="petrov-official@petya.com")
+			.mb-3
+				label.form-label(for="formGroupExampleInput") Телефон
+				input.form-control#formGroupExampleInput(type="text" placeholder="+79996664423")
+			.mb-3
+				button.btn.btn-primary(type="submit") Отправить заявку
